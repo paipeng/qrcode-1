@@ -21,6 +21,12 @@
 
 #include "scanner.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 void qrc_encode(scanner_t* scanner, const char* data);
 
+#ifdef __cplusplus
+}
+#endif
 #endif

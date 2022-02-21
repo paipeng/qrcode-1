@@ -29,7 +29,12 @@
     
     qrc_encode(&scanner, "TEST01234");
     
-    
+    for (int i = 0; i < scanner.s; i++) {
+        for (int j = 0; j < scanner.s; j++) {
+            printf("%02X ", scanner.d[i*scanner.s+j] * 0xFF);
+        }
+        printf("\n");
+    }
     free(scanner.d);
 }
 

@@ -79,9 +79,10 @@ static byte nextint(FILE* f)
 
 static byte nextbit(FILE* f, byte* buf, size_t* buf_avail)
 {
+    size_t read_size;
 	if (!*buf_avail)
 	{
-		fread(buf, 1, 1, f);
+        read_size = fread(buf, 1, 1, f);
 		*buf_avail = 8;
 	}
 	return (*buf >> (--(*buf_avail))) & 1;

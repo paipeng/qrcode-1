@@ -27,6 +27,24 @@
 		737C9D4D27C281120020252F /* modules.h in Headers */ = {isa = PBXBuildFile; fileRef = 737C9D4427C281120020252F /* modules.h */; };
 		737C9D5527C282F90020252F /* QrCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 737C9D5427C282F90020252F /* QrCodeTests.m */; };
 		737C9D5727C282F90020252F /* libqrcode.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 737C9D1E27C280CF0020252F /* libqrcode.dylib */; };
+		737C9DC427C6F7030020252F /* pbm.h in Headers */ = {isa = PBXBuildFile; fileRef = 737C9D3B27C281120020252F /* pbm.h */; };
+		737C9DC527C6F7030020252F /* data.h in Headers */ = {isa = PBXBuildFile; fileRef = 737C9D3027C280FD0020252F /* data.h */; };
+		737C9DC627C6F7030020252F /* modules.h in Headers */ = {isa = PBXBuildFile; fileRef = 737C9D4427C281120020252F /* modules.h */; };
+		737C9DC727C6F7030020252F /* bch.h in Headers */ = {isa = PBXBuildFile; fileRef = 737C9D2C27C280FD0020252F /* bch.h */; };
+		737C9DC827C6F7030020252F /* blocks.h in Headers */ = {isa = PBXBuildFile; fileRef = 737C9D2627C280FD0020252F /* blocks.h */; };
+		737C9DC927C6F7030020252F /* scanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 737C9D3D27C281120020252F /* scanner.h */; };
+		737C9DCA27C6F7030020252F /* decoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 737C9D2727C280FD0020252F /* decoder.h */; };
+		737C9DCB27C6F7030020252F /* encoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 737C9D2A27C280FD0020252F /* encoder.h */; };
+		737C9DCC27C6F7030020252F /* rs.h in Headers */ = {isa = PBXBuildFile; fileRef = 737C9D3E27C281120020252F /* rs.h */; };
+		737C9DCE27C6F7030020252F /* decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 737C9D2F27C280FD0020252F /* decoder.c */; };
+		737C9DCF27C6F7030020252F /* data.c in Sources */ = {isa = PBXBuildFile; fileRef = 737C9D2927C280FD0020252F /* data.c */; };
+		737C9DD027C6F7030020252F /* blocks.c in Sources */ = {isa = PBXBuildFile; fileRef = 737C9D2B27C280FD0020252F /* blocks.c */; };
+		737C9DD127C6F7030020252F /* pbm.c in Sources */ = {isa = PBXBuildFile; fileRef = 737C9D4227C281120020252F /* pbm.c */; };
+		737C9DD227C6F7030020252F /* encoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 737C9D2D27C280FD0020252F /* encoder.c */; };
+		737C9DD327C6F7030020252F /* bch.c in Sources */ = {isa = PBXBuildFile; fileRef = 737C9D2E27C280FD0020252F /* bch.c */; };
+		737C9DD427C6F7030020252F /* rs.c in Sources */ = {isa = PBXBuildFile; fileRef = 737C9D4327C281120020252F /* rs.c */; };
+		737C9DD527C6F7030020252F /* modules.c in Sources */ = {isa = PBXBuildFile; fileRef = 737C9D3C27C281120020252F /* modules.c */; };
+		737C9DD627C6F7030020252F /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 737C9D4127C281120020252F /* Makefile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +82,7 @@
 		737C9D5227C282F90020252F /* QrCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QrCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		737C9D5427C282F90020252F /* QrCodeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QrCodeTests.m; sourceTree = "<group>"; };
 		737C9D5627C282F90020252F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		737C9DDB27C6F7030020252F /* liblibqrcode.a */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = liblibqrcode.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +98,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				737C9D5727C282F90020252F /* libqrcode.dylib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		737C9DD727C6F7030020252F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +125,7 @@
 			children = (
 				737C9D1E27C280CF0020252F /* libqrcode.dylib */,
 				737C9D5227C282F90020252F /* QrCodeTests.xctest */,
+				737C9DDB27C6F7030020252F /* liblibqrcode.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -158,6 +185,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		737C9DC327C6F7030020252F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				737C9DC427C6F7030020252F /* pbm.h in Headers */,
+				737C9DC527C6F7030020252F /* data.h in Headers */,
+				737C9DC627C6F7030020252F /* modules.h in Headers */,
+				737C9DC727C6F7030020252F /* bch.h in Headers */,
+				737C9DC827C6F7030020252F /* blocks.h in Headers */,
+				737C9DC927C6F7030020252F /* scanner.h in Headers */,
+				737C9DCA27C6F7030020252F /* decoder.h in Headers */,
+				737C9DCB27C6F7030020252F /* encoder.h in Headers */,
+				737C9DCC27C6F7030020252F /* rs.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
@@ -196,6 +239,23 @@
 			productReference = 737C9D5227C282F90020252F /* QrCodeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		737C9DC227C6F7030020252F /* libqrcode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 737C9DD827C6F7030020252F /* Build configuration list for PBXNativeTarget "libqrcode" */;
+			buildPhases = (
+				737C9DC327C6F7030020252F /* Headers */,
+				737C9DCD27C6F7030020252F /* Sources */,
+				737C9DD727C6F7030020252F /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libqrcode;
+			productName = qrcode;
+			productReference = 737C9DDB27C6F7030020252F /* liblibqrcode.a */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -226,6 +286,7 @@
 			projectRoot = "";
 			targets = (
 				737C9D1D27C280CF0020252F /* qrcode */,
+				737C9DC227C6F7030020252F /* libqrcode */,
 				737C9D5127C282F90020252F /* QrCodeTests */,
 			);
 		};
@@ -263,6 +324,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				737C9D5527C282F90020252F /* QrCodeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		737C9DCD27C6F7030020252F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				737C9DCE27C6F7030020252F /* decoder.c in Sources */,
+				737C9DCF27C6F7030020252F /* data.c in Sources */,
+				737C9DD027C6F7030020252F /* blocks.c in Sources */,
+				737C9DD127C6F7030020252F /* pbm.c in Sources */,
+				737C9DD227C6F7030020252F /* encoder.c in Sources */,
+				737C9DD327C6F7030020252F /* bch.c in Sources */,
+				737C9DD427C6F7030020252F /* rs.c in Sources */,
+				737C9DD527C6F7030020252F /* modules.c in Sources */,
+				737C9DD627C6F7030020252F /* Makefile in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +525,38 @@
 			};
 			name = Release;
 		};
+		737C9DD927C6F7030020252F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5KASZAMAP9;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_EXTENSION = a;
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		737C9DDA27C6F7030020252F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 5KASZAMAP9;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				EXECUTABLE_EXTENSION = a;
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -474,6 +583,15 @@
 			buildConfigurations = (
 				737C9D5B27C282F90020252F /* Debug */,
 				737C9D5C27C282F90020252F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		737C9DD827C6F7030020252F /* Build configuration list for PBXNativeTarget "libqrcode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				737C9DD927C6F7030020252F /* Debug */,
+				737C9DDA27C6F7030020252F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

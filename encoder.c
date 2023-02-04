@@ -385,17 +385,17 @@ void qrc_encode(scanner_t* scanner, const char* data)
 	// set format information
 	set_format(scanner, scanner->c, best_m);
     if (scanner->verbosity >= 1) {
-	printf("P1\n%zu %zu\n", s, s);
-	for (size_t i = 0; i < s; i++)
-	{
-		for (size_t j = 0; j < s; j++)
-		{
-			if (d[i*s+j])
-				printf("1 ");
-			else
-				printf("0 ");
-		}
-		printf("\n");
-	}
+        printf("P1\n%zu %zu\n", s, s);
+        for (size_t i = 0; i < s; i++)
+        {
+            for (size_t j = 0; j < s; j++)
+            {
+                if (d[i*s+j])
+                    printf("1 ");
+                else
+                    printf("0 ");
+            }
+            printf("\n");
+        }
     }
 }

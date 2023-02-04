@@ -372,7 +372,9 @@ void qrc_encode(scanner_t* scanner, const char* data)
 			best_s = s;
 		}
 	}
-	scanner->m = best_m;
+    if (scanner->m < 0 || scanner->m > 7) {
+        scanner->m = best_m;
+    }
 
 	if (scanner->verbosity >= 1)
 		fprintf(stderr, "Version %i-%c selected (mask %u)\n", v, "LMQH"[scanner->c], scanner->m);

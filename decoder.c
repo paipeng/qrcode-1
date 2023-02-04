@@ -63,7 +63,7 @@ void qrc_decode(scanner_t* scanner)
 		fprintf(stderr, "Unsupported version '%zu'\n", v);
 		exit(1);
 	}
-	scanner->v = v;
+	scanner->v = (int)v;
 	if (v >= 7)
 	{
 		bch_t version1 = 0;

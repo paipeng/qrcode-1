@@ -20,7 +20,9 @@
 #define QRMODULES_H
 
 #include "scanner.h"
-
+#if defined(c_plusplus) || defined(__cplusplus)
+extern "C" {
+#endif
 void next_bit (scanner_t* scanner);
 void skip_bits(scanner_t* scanner, size_t n);
 
@@ -30,5 +32,7 @@ void mask_apply(scanner_t* scanner, byte m);
 
 byte get_codeword(scanner_t* scanner);
 void put_codeword(scanner_t* scanner, byte w);
-
+#if defined(c_plusplus) || defined(__cplusplus)
+}
+#endif
 #endif

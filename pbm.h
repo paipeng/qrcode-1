@@ -22,7 +22,11 @@
 #include <stdio.h>
 
 #include "scanner.h"
-
+#if defined(c_plusplus) || defined(__cplusplus)
+extern "C" {
+#endif
 void load_pbm(scanner_t* scanner, FILE* f);
-
+#if defined(c_plusplus) || defined(__cplusplus)
+}
+#endif
 #endif

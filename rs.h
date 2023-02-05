@@ -32,7 +32,13 @@ struct poly
 	byte c[512]; // coefficients
 };
 
+#if defined(c_plusplus) || defined(__cplusplus)
+extern "C" {
+#endif
 void rs_encode(size_t n_data, byte* data, byte n_sym);
 byte rs_decode(size_t n_data, byte* data, byte n_sym);
+#if defined(c_plusplus) || defined(__cplusplus)
+}
+#endif
 
 #endif

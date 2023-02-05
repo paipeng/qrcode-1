@@ -20,8 +20,12 @@
 #define BLOCKS_H
 
 #include "scanner.h"
-
+#if defined(c_plusplus) || defined(__cplusplus)
+extern "C" {
+#endif
 unsigned int get_bits(scanner_t* scanner, size_t n);
 void         put_bits(scanner_t* scanner, size_t n, const char* stream);
-
+#if defined(c_plusplus) || defined(__cplusplus)
+}
+#endif
 #endif

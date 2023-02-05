@@ -20,9 +20,13 @@
 #define BCH_H
 
 typedef signed long bch_t;
-
+#if defined(c_plusplus) || defined(__cplusplus)
+extern "C" {
+#endif
 bch_t bch_check (bch_t g, bch_t code);
 bch_t bch_encode(bch_t g, bch_t code);
 bch_t bch_decode(bch_t g, bch_t code);
-
+#if defined(c_plusplus) || defined(__cplusplus)
+}
+#endif
 #endif

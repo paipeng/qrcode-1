@@ -20,7 +20,11 @@
 #define QRCODE_H
 
 #include "pbm.h"
-
+#if defined(c_plusplus) || defined(__cplusplus)
+extern "C" {
+#endif
 void qrc_decode(scanner_t* scanner);
-
+#if defined(c_plusplus) || defined(__cplusplus)
+}
+#endif
 #endif

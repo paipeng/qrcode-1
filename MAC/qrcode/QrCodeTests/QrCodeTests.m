@@ -7,6 +7,8 @@
 
 #import <XCTest/XCTest.h>
 #include "encoder.h"
+#include "decoder.h"
+
 
 @interface QrCodeTests : XCTestCase
 

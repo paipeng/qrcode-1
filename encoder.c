@@ -281,7 +281,7 @@ static void set_format(scanner_t* scanner, int ecl, byte mask)
 	}
 }
 
-void qrc_encode(scanner_t* scanner, const char* data)
+int qrc_encode(scanner_t* scanner, const char* data)
 {
 	// generate bit stream
 	stream_t stream;
@@ -296,7 +296,7 @@ void qrc_encode(scanner_t* scanner, const char* data)
 		if (v < 0)
 		{
 			fprintf(stderr, "The data cannot fit in any QR-code\n");
-			exit(1);
+            return -1;
 		}
 
 		size_t vr = version_range[v];
@@ -315,7 +315,7 @@ void qrc_encode(scanner_t* scanner, const char* data)
 	if (d == NULL)
 	{
 		fprintf(stderr, "Could not allocate image\n");
-		exit(1);
+        return -2;
 	}
 	scanner->d = d;
 
@@ -398,4 +398,5 @@ void qrc_encode(scanner_t* scanner, const char* data)
             printf("\n");
         }
     }
+    return 0;
 }

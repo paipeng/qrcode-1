@@ -40,7 +40,7 @@ static void check_finder(scanner_t* scanner, size_t i, size_t j)
 			exit(1);
 		}
 }
-void qrc_decode(scanner_t* scanner)
+int qrc_decode(scanner_t* scanner)
 {
 	// size
 	size_t s = scanner->s;
@@ -55,13 +55,13 @@ void qrc_decode(scanner_t* scanner)
 	if (v % 4 != 0)
 	{
 		fprintf(stderr, "Invalid image size\n");
-		exit(1);
+        return -1;
 	}
 	v /= 4;
 	if (!(1 <= v && v <= 40))
 	{
 		fprintf(stderr, "Unsupported version '%zu'\n", v);
-		exit(1);
+        return -2;
 	}
 	scanner->v = (int)v;
 	if (v >= 7)
@@ -80,13 +80,13 @@ void qrc_decode(scanner_t* scanner)
 		if ((version1 < 0 && version2 < 0) || version1 != version2)
 		{
 			fprintf(stderr, "Version information corrupted\n");
-			exit(1);
+            return -3;
 		}
 
 		if (version1 != (bch_t) v)
 		{
 			fprintf(stderr, "Version information mismatches size\n");
-			exit(1);
+            return -4;
 		}
 	}
 
@@ -116,7 +116,7 @@ void qrc_decode(scanner_t* scanner)
 	if ((format1 < 0 && format2 < 0) || format1 != format2)
 	{
 		fprintf(stderr, "Format information corrupted\n");
-		exit(1);
+        return -5;
 	}
 
 	// END format information
@@ -185,8 +185,9 @@ void qrc_decode(scanner_t* scanner)
 		else
 		{
 			fprintf(stderr, "Unsupported encoding '%u'\n", enc);
-			exit(1);
+            return -6;
 		}
 	}
 	printf("\n");
+    return 0;
 }
